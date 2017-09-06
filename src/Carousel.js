@@ -64,9 +64,9 @@ const defaultProps = {
   wrap: true,
   indicators: true,
   controls: true,
-  prevIcon: <Glyphicon glyph="chevron-left" />,
+  prevIcon: <i className="fa fa-angle-left" />,
   prevLabel: 'Previous',
-  nextIcon: <Glyphicon glyph="chevron-right" />,
+  nextIcon: <i className="fa fa-angle-right" />,
   nextLabel: 'Next',
 };
 
@@ -295,7 +295,7 @@ class Carousel extends React.Component {
       (wrap || activeIndex !== 0) && (
         <SafeAnchor
           key="prev"
-          className={classNames(controlClassName, 'left')}
+          className={classNames(controlClassName+'-left', null)}
           onClick={this.handlePrev}
         >
           {prevIcon}
@@ -306,7 +306,7 @@ class Carousel extends React.Component {
       (wrap || activeIndex !== count - 1) && (
         <SafeAnchor
           key="next"
-          className={classNames(controlClassName, 'right')}
+          className={classNames(controlClassName + '-right', null)}
           onClick={this.handleNext}
         >
           {nextIcon}
