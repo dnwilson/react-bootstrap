@@ -77,7 +77,7 @@ class CarouselItem extends React.Component {
     }
 
     this.setState({
-      direction: this.props.direction === 'prev' ? 'right' : 'left',
+      direction: this.props.active ? 'right' : 'left',
     });
   }
 
